@@ -20,7 +20,74 @@
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(circle at 20% 20%, #fef3c7 0, #f8fafc 35%),
+    radial-gradient(circle at 80% 0%, #e0f2fe 0, #ffffff 40%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Scorecard safe colors/fonts for dom-to-image */
+.scorecard-safe,
+.scorecard-safe * {
+  font-family: "Inter", system-ui, -apple-system, sans-serif !important;
+}
+.scorecard-safe .text-slate-900,
+.scorecard-safe .text-slate-800,
+.scorecard-safe .text-slate-700,
+.scorecard-safe .text-slate-600,
+.scorecard-safe .text-slate-500 {
+  color: #0f172a !important;
+}
+.scorecard-safe .text-emerald-700 {
+  color: #047857 !important;
+}
+.scorecard-safe .text-emerald-800 {
+  color: #065f46 !important;
+}
+.scorecard-safe .text-rose-700 {
+  color: #be123c !important;
+}
+.scorecard-safe .text-rose-800 {
+  color: #9f1239 !important;
+}
+.scorecard-safe .text-sky-800 {
+  color: #075985 !important;
+}
+.scorecard-safe .bg-white {
+  background-color: #ffffff !important;
+}
+.scorecard-safe .bg-red-600 {
+  background-color: #dc2626 !important;
+}
+.scorecard-safe .bg-red-50 {
+  background-color: #fef2f2 !important;
+}
+.scorecard-safe .bg-yellow-300 {
+  background-color: #facc15 !important;
+}
+.scorecard-safe .border-red-600 {
+  border-color: #dc2626 !important;
+}
+.scorecard-safe .border-red-500 {
+  border-color: #ef4444 !important;
+}
+.scorecard-safe .border-red-200 {
+  border-color: #fecdd3 !important;
+}
+.scorecard-table {
+  table-layout: fixed;
+}
+.scorecard-table th,
+.scorecard-table td {
+  font-size: 12px;
+  padding: 8px 6px;
+  word-break: break-word;
+}
+@media (max-width: 640px) {
+  .scorecard-safe .scorecard-table th,
+  .scorecard-safe .scorecard-table td {
+    font-size: 11px;
+    padding: 6px 4px;
+  }
 }
